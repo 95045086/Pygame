@@ -1,0 +1,15 @@
+import random
+from random import randint
+twodgrid = [[0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0]]
+def randompos():
+    temp1 = random.randint(0, 4)
+    temp2 = random.randint(0, 4)
+    while twodgrid[temp1][temp2] == 2:
+        temp1 = random.randint(0, 4)
+        temp2 = random.randint(0, 4)
+    twodgrid[temp1][temp2] = 2
+    print(twodgrid)
+randompos()
